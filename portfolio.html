@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"> 
+<title>PORTFOLIO</title>
+<link rel="stylesheet" href="./reset.css">
+<link rel="stylesheet" href="./portfolio.css">
+<link rel="stylesheet" href="https://use.typekit.net/qug1cim.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap" />
+<link rel="icon" type="image/png" sizes="32x32" href="./꽃순이.svg">
+<style></style>
+<script src="./jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+
+
+//menu Hover
+        
+        // $(".menuBtn").hover(function(){
+        //     $("#hiddenBd").addClass("bdHover");
+        // },function(){s
+        //     $("#hiddenBd").removeClass("bdHover");
+		// });
+        
+
+        // var scrollPosition = $(window).scrollTop();
+        // var scrollNum = 0; 
+
+        // $(window).scroll(function() {
+        //     var scroll = $(window).scrollTop();
+            
+        //     if ( scroll > ( scrollPosition + 20 )  && scrollNum == 0 ) {
+        //         console.log('scrollDown');
+        //         $(".menuBtn").slideUp(500);
+        //         scrollNum = 1;
+        //     } else if ( scroll <  ( scrollPosition - 20 )  && scrollNum == 1 ) {
+        //         console.log('scrollUp');
+        //         $(".menuBtn").slideDown(500);
+        //         scrollNum = 0;
+        //     }
+        //     scrollPosition = scroll;
+        // });
+
+
+// background color
+
+
+        var bgColor = ["#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000"];
+
+        $("body").css({backgroundColor:bgColor[0]});
+
+
+        var li01Left = $("#realcontent ul li").eq(0).offset().left;
+        var li02Left = $("#realcontent ul li").eq(1).offset().left;
+        var li03Left = $("#realcontent ul li").eq(2).offset().left;
+        var li04Left = $("#realcontent ul li").eq(3).offset().left;
+        var li05Left = $("#realcontent ul li").eq(4).offset().left;
+        var li06Left = $("#realcontent ul li").eq(5).offset().left;
+        var li07Left = $("#realcontent ul li").eq(6).offset().left;
+        var li08Left = $("#realcontent ul li").eq(7).offset().left;
+
+        var leftMinus = $("#hiddenleft").width();
+
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            if ( scroll > ( li07Left - leftMinus )) {
+                $("body").css({backgroundColor:bgColor[7]});
+                $("ol li p").css({width:0});
+                $("ol li p").eq(3).css({width:"100%"});
+            } else if ( scroll > ( li06Left - leftMinus )) {
+                $("body").css({backgroundColor:bgColor[6]});
+                $("ol li p").css({width:0});
+                $("ol li p").eq(2).css({width:"100%"});
+            } else if ( scroll > ( li05Left - leftMinus )) {
+                $("body").css({backgroundColor:bgColor[5]});
+                $("ol li p").css({width:0});
+                $("ol li p").eq(2).css({width:"100%"});
+            } else if ( scroll > ( li04Left - leftMinus )) {
+                $("body").css({backgroundColor:bgColor[4]});
+                $("ol li p").css({width:0});
+                $("ol li p").eq(1).css({width:"100%"});
+            } else if ( scroll > ( li03Left - leftMinus )) {
+                $("body").css({backgroundColor:bgColor[3]});
+                $("ol li p").css({width:0});
+                $("ol li p").eq(1).css({width:"100%"});
+            } else if ( scroll > ( li02Left - leftMinus )) {
+                $("body").css({backgroundColor:bgColor[2]});
+                $("ol li p").css({width:0});
+                $("ol li p").eq(0).css({width:"100%"});
+            } else {
+                $("body").css({backgroundColor:bgColor[1]});
+                $("ol li p").css({width:0});
+                $("ol li p").eq(0).css({width:"100%"});
+                // $("#realcontent ul li").removeClass("clickOpacity");
+            }
+        });
+
+        $("#realcontent ul li").eq(0).mouseover(function(){
+            $("body").css({backgroundColor:bgColor[0]});
+        });
+        $("#realcontent ul li").eq(1).mouseover(function(){
+            $("body").css({backgroundColor:bgColor[1]});
+        });
+        $("#realcontent ul li").eq(2).mouseover(function(){
+            $("body").css({backgroundColor:bgColor[2]});
+        });
+        $("#realcontent ul li").eq(3).mouseover(function(){
+            $("body").css({backgroundColor:bgColor[3]});
+        });
+        $("#realcontent ul li").eq(4).mouseover(function(){
+            $("body").css({backgroundColor:bgColor[4]});
+        });
+        $("#realcontent ul li").eq(5).mouseover(function(){
+            $("body").css({backgroundColor:bgColor[5]});
+        });
+        $("#realcontent ul li").eq(6).mouseover(function(){
+            $("body").css({backgroundColor:bgColor[6]});
+        });
+        $("#realcontent ul li").eq(7).mouseover(function(){
+            $("body").css({backgroundColor:bgColor[7]});
+        });
+        $("#realcontent ul li").eq(8).mouseover(function(){
+            $("body").css({backgroundColor:bgColor[8]});
+        });
+
+        $("#realcontent ul li").hover(function(){
+            $(this).addClass("imgScale");
+        },function(){
+            $(this).removeClass("imgScale");
+        });
+
+
+        $("ol li").eq(0).click(function(){
+            $("#realcontent ul").animate({left:(-li01Left+leftMinus)},500);
+        });
+        $("ol li").eq(1).click(function(){
+            $("#realcontent ul").animate({left:(-li04Left+leftMinus)},500);
+        });
+        $("ol li").eq(2).click(function(){
+            $("#realcontent ul").animate({left:(-li06Left+leftMinus)},500);
+        });
+        $("ol li").eq(3).click(function(){
+            $("#realcontent ul").animate({left:(-li08Left+leftMinus)},500);
+        });
+
+
+        $("ol li").click(function(){
+            $("ol li p").css({width:0});
+            $("p",this).css({width:"100%"});
+        });
+
+
+        var windowWidth = $(window).width();
+
+        if ( windowWidth > 480 ) {           
+                $(window).on('scroll', function() {
+                    b = $(window).scrollTop();
+                    $("#realcontent ul").css("left", -b);
+                }); 
+                
+                $("ol li p").eq(0).css({width:"100%"});
+                
+                $(window).scroll(function() {
+                    $("#realcontent ul li").removeClass("clickOpacity");
+                }); 
+
+                $("ol li").eq(0).click(function(){
+                    $("body").css({backgroundColor:bgColor[1]});
+                    $("#realcontent ul li").addClass("clickOpacity");
+                    $("#realcontent ul li.web").removeClass("clickOpacity");
+                });
+                $("ol li").eq(2).click(function(){
+                     $("body").css({backgroundColor:bgColor[4]});
+                     $("#realcontent ul li").addClass("clickOpacity");
+                     $("#realcontent ul li.SOCIAL").removeClass("clickOpacity");
+                 });
+                $("ol li").eq(1).click(function(){
+                    $("body").css({backgroundColor:bgColor[6]});
+                    $("#realcontent ul li").addClass("clickOpacity");
+                    $("#realcontent ul li.branding").removeClass("clickOpacity");
+                });
+                $("ol li").eq(3).click(function(){
+                    $("body").css({backgroundColor:bgColor[8]});
+                    $("#realcontent ul li").addClass("clickOpacity");
+                    $("#realcontent ul li.PLANNING").removeClass("clickOpacity");
+                });
+            } 
+
+        
+
+// mobile menu button
+
+        $("button#mobileMenuBtn").click(function(){
+                $("#mobileMenuBtnbg").addClass("mobileBtnClick");
+                $("#mobileMenuBtnbg #mobileMenu").fadeIn(500);
+                $(this).fadeOut(500);
+                $("button#mobileMenuBtnClose").fadeIn(500);
+
+            });
+                
+         $("button#mobileMenuBtnClose").click(function(){
+                $("#mobileMenuBtnbg").removeClass("mobileBtnClick");
+                $("#mobileMenuBtnbg #mobileMenu").fadeOut(500);
+                $(this).fadeOut(500);
+                $("button#mobileMenuBtn").fadeIn(500);
+
+});
+           
+
+
+                
+    });
+    </script>
+</head>
+<body>
+    <div id="realcontent">
+        <ul>
+            <li class="web">
+                <a href="./index.html">
+                    <img src="./꽃순이.png" alt="전주언 포트폴리오"/>
+                    <div class="blackHover">
+                        <div class="projectInfo">
+                            <h2>Personal Website</h2>
+                            <h3>웹 퍼블리셔 전주언</h3>
+                            <h4>개인 포트폴리오</h4>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="web">
+                <a href="./movie/movie.html">
+                  <img src="./movie/MEGABOXLOGO.svg" style="width:430px;" alt="MEGABOX 리뉴얼 프로젝트 보기"/>
+                    <div class="blackHover">
+                        <div class="projectInfo">
+                            <h2>Web Renewal</h2>
+                            <h3>웹/모바일페이지 리뉴얼</h3>
+                            <h4>MEGABOX</h4>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="mobile">
+                <a href="project04.html">
+                    <img src="./ready.png" alt="웹 기획1"/>
+                    <div class="blackHover">
+                        <div class="projectInfo">
+                            <h2>Mobile App</h2>
+                            <h3>학교급식 캐치 테이블</h3>
+                            <h4>달그락</h4>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="branding">
+                <a href="./Branding/brand.html">
+                   <img src="./꽃순이.png" alt="창업 동아리 브랜딩"/>
+                    <div class="blackHover">
+                        <div class="projectInfo">
+                            <h2>Branding</h2>
+                            <h3>창업 동아리 브랜딩</h3>
+                            <h4>CREVICE</h4>
+                        </div>
+                    </div>
+            </li>
+            <li class="SOCIAL">
+                <a href="./socialproblem.pdf">
+                    <img src="./Branding/스마일_크래비스.svg" alt="인권문제 해결"/>
+                    <div class="blackHover">
+                        <div class="projectInfo">
+                            <h2>SOCIAL</h2>
+                            <h3>사회문제 해결 </h3>
+                            <h4>about. <b>인권</b></h4>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="SOCIAL">
+                <a href="./socialcirpro.pdf">
+                    <img src="./Branding/스마일_크래비스.svg" alt="사회문제 해결"/>
+                    <div class="blackHover">
+                        <div class="projectInfo">
+                            <h2>SOCIAL</h2>
+                            <h3>사회문제 해결</h3>
+                            <h4>about. <b>환경</b></h4>
+                        </div>
+                    </div>
+                </a>
+            </li>
+          
+            <li class="PLANNING">
+                <a href="./movieplan/plan.html">
+                    <img src="./movie/MEGABOXLOGO.svg" style="width:430px;" alt="웹 설몀서"/>
+                    <div class="blackHover">
+                        <div class="projectInfo">
+                            <h2>PLANNING</h2>
+                            <h3>웹 리뉴얼 기획</h3>
+                            <h4>MEGABOX</h4>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="PLANNING">
+                <a href="./CREVICE_EDU.pdf">
+                    <img src="./ready.png" alt="신입생 웹퍼블리싱 교육자료"/>
+                    <div class="blackHover">
+                        <div class="projectInfo">
+                            <h2>PLANNING</h2>
+                            <h3>신입생 웹퍼블리싱 교육자료</h3>
+                            <h4>EDUCATION</h4>
+                        </div>
+                    </div>
+                </a> 
+            </li>
+        </ul>
+    </div>
+
+    <div id="scrollDown">
+        <img src="./arrow-up.png" alt="scroll down"></div>
+    </div>
+    
+    <div id="fakecontent"></div>   
+    
+    <ol>
+        <li>
+            WEB/Mobile
+            <p>WEB/Mobile</p>
+            <span></span>
+        </li>
+    
+        <li>
+            BRANDING 
+            <p>BRANDING </p>
+            <span></span>
+        </li>
+        <li>
+            SOCIAL
+            <p>SOCIAL</p>
+            <span></span>
+        </li>
+        <li>
+            PLANNING
+            <p>PLANNING</p>
+            <span></span>
+        </li>
+    </ol>
+    
+    <div id="hiddenleft"></div>
+
+<!-- 메뉴 -->
+
+	<div id="hiddenBd"></div>
+	<button id="main" class="menuBtn"><a href="./index.html">BACK TO MAIN</a></button>
+
+
+
+
+
+
+<!-- 모바일 메뉴 버튼 -->
+    
+    <div id="mobileMenuBtnbg">
+        <div id="mobileMenu">
+            <ul>
+                <li><a href="../index.html">BACK TO MAIN</a></li>
+            </ul>
+        </div>
+    </div>
+    <button id="mobileMenuBtn">menu</button>
+    <button id="mobileMenuBtnClose">
+        <span></span>
+        <span></span>
+    </button>
+
+    
+</body>
+</html>

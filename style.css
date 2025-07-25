@@ -1,0 +1,1146 @@
+@charset "utf-8";
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap'); */
+
+
+body {
+  font-family: 'Josefin Sans', 'NanumSquare', 'Noto Sans KR', 'Roboto', sans-serif;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,table,tr,th,td{ margin:0; padding:0; }
+li{ list-style:none; }
+a{ text-decoration:none; }
+button{ border:0; background:none; cursor:pointer; } 
+section{float:left; clear:both; width:100%; } 
+.intro{ background: url(../images/intro_bg.jpg) no-repeat center top/cover fixed;} 
+.job{ background: url(../images/job_bg.jpg) no-repeat center top/cover fixed; }
+.port{ background: url(../images/port_bg.jpg) no-repeat center top/cover fixed; }
+.QnA{ background: url(../images/QnA_bg.jpg) no-repeat center top/cover fixed; }  
+.profile{ background:#000; }  
+.step{ background:#000; }   
+.job{ background:#000; }
+.port{ background:#000; }
+.QnA{ background:#000; }  
+#header{ background:#000; }
+h1{ padding-top:10px; }
+.footer_wrap{ background:#000; color:white; font-size: 15px; }
+ 
+/* 모바일환경(css)-스크린폭: 최대 500px 이하 */ 
+@media screen and (max-width:500px){
+    
+        section h2{ display: none;}
+    
+        /* header  -------------------------------------*/
+        #header{
+            height:80px;
+            box-sizing:border-box; }
+        h1{
+            line-height: 80px;
+            padding-left:15px;
+        }
+        .nav_btn{
+            position:fixed; right:10px; top:0;
+        }
+        .nav_btn button{
+            width:45px; height:45px;
+            margin:17px 10px 0 0;
+        }
+        .nav_close_btn button{
+            width:45px; height:45px;
+            margin:17px 10px 0 0;
+        }
+        .nav_btn button:hover, .nav_close_btn button:hover{
+            background:none; color:#000;
+        }
+        nav{
+            position:fixed; z-index:1;
+            left:0; top:0; margin-left:-100%;
+            width:100%; height:100%;
+         background: #1d1d1d;
+         opacity:0.97;
+        }
+        .nav_close_btn{
+            height:80px;
+         padding-right:10px;
+            text-align: right;
+        }
+        .gnb button{
+            display:block;
+            width:100%; height:60px;
+            font-size:18px; font-weight:bold;
+            color:#ffff;
+        }
+        .gnb button:hover{background:rgb(44, 212, 21); color:#000;}
+        
+        /*  intro  -------------------------------------*/
+        .intro{
+            width:100%;
+            height:100%; 
+            overflow:hidden;  
+            background: url(../images/intro_bg.jpg)  center top/cover  ;
+        }
+        .intro_wrap h2{ display:none; }
+        .intro_wrap ul{ 
+          width:300%; 
+          height:500px; 
+          margin-top:30px; 
+        }
+        .intro_wrap li{
+            width:33.333%;
+            height:500px;
+            float:left;
+            text-align:left;
+        }
+
+        .intro_wrap li div{ padding:50px 20px 0; }
+        
+        .intro_wrap li p:first-child{
+            font-size:30px; font-weight:bold;  color:rgb(254, 183, 41);
+            letter-spacing: -2px;
+            padding: 30px 0 40px 0; 
+        }
+        
+        .intro_wrap li p:first-child br{ display: none;}
+        
+        .intro_wrap li p:nth-child(2){
+            margin-bottom:20px; color:#ffff;
+            font-size:24px; font-weight:bold; font-family:"NanumSquare";
+        }
+        .intro_wrap li p:last-child{
+            color:#ffff;
+             font-size:17px; font-family:"NanumSquare";
+        }
+        .intro_btn{
+            width:180px; height:30px;
+            position:absolute;
+            left:50%; margin:-80px 0 0 -20px;
+        }
+        .intro_btn button:hover:not(:last-child){
+            background:url(../images/intro_btn_now.png) no-repeat center top;
+        }
+
+        /*  container  -------------------------------------*/
+        #container section:not(:first-child){
+            height:1000px; text-align:center;
+        }
+        #container section h2{
+            height:100px; line-height:100px;
+            font-size:25px;
+        }
+        
+        /*  profile  -------------------------------------*/
+    
+    
+        .profile_wrap div p{
+            padding:0 5px; color:#fff;
+            text-align:left; margin:0 25px;
+        }
+        .profile_wrap div img{
+            width:100%; height:100%;
+        }
+
+        .profile_wrap ul li img {
+            width: 110%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .profile_wrap div p{ margin-bottom:30px; line-height: 25px; }
+        .profile_wrap div p:first-child{ 
+            font-size: 30px; font-weight: bold; 
+            padding-top:300px; color:#fff;
+            line-height: 40px;
+        }
+        .profile_wrap div li{
+            width:200px; height:265px;
+            border:1px solid #999;
+            border-radius:23px;
+            overflow:hidden;
+            margin:40px auto;
+        }
+        
+        /* step  -------------------------------------*/
+    
+    
+        .step_wrap table{
+            border-collapse:collapse; 
+            width:90%; margin:40px 5%; 
+         
+        }
+        .step_wrap tr>*{ display:block; }
+        .step_wrap th{
+            height:40px; line-height:40px;
+            font-size:17px; 
+            background:#aeb6b9; color:#fff;
+            border-radius:23px;
+        }
+        .step_wrap td{ padding:20px 20px 15px 20px; color:#fff; line-height: 25px; }
+        .step_wrap td br{ display:none; }
+        
+        /* job  -------------------------------------*/
+        .job_chart{ width:90%; margin:0 5%; color:#fff; }
+        .job_chart ul{ margin-top: 30px;}
+        .job_chart li{
+            width:100%; height:40px;
+            /*border:1px solid #d9d9d9;*/
+            margin:10px 0; line-height:40px;
+            color:#fff;
+        }
+        .job_chart li p{
+            text-align:left;
+            text-indent:10px;
+            overflow:hidden; color:#fff; 
+            font-weight: bold; 
+        } 
+        .job_chart li:nth-child(1) p{ width:80%; background:rgb(250, 250, 250,0.4); }
+    .job_chart li:nth-child(2) p{ width:90%; background:rgb(250, 250, 250,0.3); }
+    .job_chart li:nth-child(3) p{ width:95%; background:rgb(250, 250, 250,0.2); }
+    .job_chart li:nth-child(4) p{ width:85%; background:rgb(250, 250, 250,0.6); }
+    .job_chart li:nth-child(5) p{ width:80%; background:rgb(250, 250, 250,0.35); }
+
+        
+        
+        .job_info li{
+            /* background:rgba(174,182,185,0.9);  */
+            background:rgb(250, 250, 250,0.1);width:90%; margin:5px 5%;
+            border-radius:23px; 
+        }
+        .job_info li p:first-child{
+            font-size:20px; height:60px; line-height:60px; color:#fff;
+            
+        }
+        .job_info li p:last-child{ padding:0 20px; color:#fff; padding-bottom:15px; }
+        .job_info li p:last-child br{ display:none; }
+        
+        
+        .job_info li:nth-child(1) p b{  color:rgb(254, 183, 41); }
+        .job_info li:nth-child(2) p b{  color:rgb(254, 183, 41); }
+        .job_info li:nth-child(3) p b{  color:rgb(254, 183, 41); }
+        .job_info li:nth-child(4) p b{  color:rgb(254, 183, 41); }
+        .job_info li:nth-child(5) p b{  color:rgb(254, 183, 41); }
+        
+        
+        /* portfolio  -------------------------------------*/
+        .port_btn{ width:90%; height:50px; margin:50px 5%; }
+        .port_btn button{
+            display:block; float:left;
+            width:30%; height:40px; margin:0 1.6%;
+            /*border:2px solid #d9d9d9;*/border:2px solid #1d1d1d;
+            box-sizing: border-box;
+            font-size:18px; border-radius:20px;
+            color:#ffff;
+        }
+        .port_wrap>ul{ width:300px; height:900px; margin:0 auto; }
+        .port_wrap>ul h3{
+            font-size:22px; color:#ffff;
+            height:50px; line-height:50px;
+            margin-bottom:25px;
+        }
+        .port_wrap>ul>li{ height:850px; }
+        .port_wrap>ul>li:nth-child(1)>p{
+            width:100%; height:200px;
+            margin:15px 0;
+        }
+        .port_wrap>ul>li:nth-child(1)>p img{ width:100%; height:200px; }
+        .port_wrap table{
+            width:100%;
+            border-collapse:collapse;
+        }
+        .port_wrap table thead tr th{
+            border-top-left-radius:23px; background:#1d1d1d;
+            border-bottom-right-radius:23px;
+            font-size:18px;
+        }
+        .port_wrap table tbody{ font-size:17px; color:#ffff; }
+        .port_wrap table tbody p a{
+            color:#ffff;
+        }
+        .port_wrap table tr>*{
+            display:block; 
+            width:90%; height:40px;
+            margin:0 5%;
+        }
+        .port_wrap table tr th{
+            background:#000; color:#ffff;
+            line-height:40px; margin-bottom:60px;
+        }
+        .port_wrap table tr:nth-child(1) td{
+            width:250px; height:60px;
+            position:absolute;
+            left:50%; margin-left:-125px;
+        }
+        .port_wrap table tr:nth-child(1) td:nth-child(1){
+            margin-top:-360px; line-height:50px;
+        }
+        .port_wrap table tr:nth-child(1) td:nth-child(2){
+            margin-top:-260px; line-height:50px;
+        }
+        .port_wrap table tr:nth-child(1) td:nth-child(3){
+            margin-top:-160px; line-height:50px;
+        }
+        .port_wrap table tr:nth-child(1) td:nth-child(4){
+            margin-top:-60px; line-height:50px;
+        }
+        .port_wrap table tr:nth-child(2) td{ line-height:26px; }
+        .port_wrap table tr:nth-child(2) td br{ display:none; }
+        .port_wrap table a{
+            display:block;
+            width:47.5%; height:40px; float:left;
+            text-align:center; line-height:40px;
+            /*border:2px solid #d9d9d9;*/border:2px solid #1d1d1d;
+            box-sizing: border-box;
+            margin-top:10px;
+            color:#000;
+        }
+        .port_wrap table a:hover{ background:#000; color:#ffff; }
+        .port_wrap table p:nth-child(2) a{ margin-right:5%; }
+        
+        .port_wrap li:nth-child(2) li{
+            width:280px; height:160px;
+            margin:15px auto;
+            float:left;
+            color:#ffff;
+        }
+        .port_wrap li:nth-child(2) li img{
+            width:100%; height:100%;
+        }
+        .port_wrap li:nth-child(3) li{
+            width:124px; height:124px;
+            margin:5px 10px;
+            float:left;
+            line-height:124px;
+        }
+        .port_wrap li:nth-child(3) li img{
+            width:100%; height:100%;
+        }
+        
+        .port_wrap ul table:nth-of-type(2){ display:none; }
+        
+        .port_wrap li:nth-child(3) button{
+            display:block;
+            font-size:28px;
+            font-family:NanumSquare;
+            float:left; color:#ffff;
+            margin-top:25px; width:50px;
+        }
+        .port_wrap li:nth-child(2) button{
+            display:block;
+            font-size:28px;
+            font-family:NanumSquare;
+            float:left; color:#ffff;
+            margin-top:25px; width:50px;
+        }
+        .port_wrap li:nth-child(2) button:nth-of-type(1){
+            margin-left:94px;
+        }
+        .port_wrap li:nth-child(3) button:nth-of-type(1){
+            margin-left:94px;
+        }
+        .check_li_img2, .check_li_img4{
+            display:none;
+        }
+        /* QnA  -------------------------------------*/
+        .QnA{ clear:both; }
+        .QnA_wrap{ width:90%; margin:0 5%; }
+        .QnA_wrap h3{ display:none; }
+        .email{
+            /*  background:rgba(255,255,255,0.8); */
+            background:#1d1d1d;
+            width:85%; height:555px;
+            padding-top:35px;
+            border-radius:20px;
+            margin:0 auto; margin-top:35px;
+        }
+        .email p{
+            text-align:center;
+            font-size:20px; font-family:NanumSquare;
+            color:#ffff; margin-bottom:25px;
+        }
+        .email div input{
+            width:80%; height:50px;
+            font-size:14px;
+            text-indent:5px;
+            border:1px solid rgb(254, 183, 41);
+            font-family:NanumSquare;
+        }
+        .email div input::placeholder{
+            color:#cccccc;
+        }
+        .title input{
+            border-radius:20px;
+            margin-bottom:15px;
+        }
+        .address input{
+            border-radius:20px;
+            margin-bottom:15px;
+        }
+        .contents textarea{
+            width:80%; height:255px;
+            border-radius:20px;
+            font-size:14px; padding-top:10px;
+            text-indent:5px; border:1px solid rgb(254, 183, 41);
+            font-family:NanumSquare;
+        }
+        .contents textarea::placeholder{
+            color:#cccccc;
+        }
+        .email button{
+            width:100px; height:35px;
+            background:rgb(254, 183, 41); color:#777;
+            border-radius:20px; font-size:15px;
+            margin-top:10px; font-family:NanumSquare;
+        }
+        .email button:hover{
+            border:2px solid #000;
+            color:#000;
+        }
+        /* footer  -------------------------------------*/
+        #footer{
+            height:150px;
+            border-top:1px solid #d9d9d9;
+            text-align:center;
+        }
+        .footer_wrap p:first-child{
+            position:fixed;
+            right: 20px;
+            bottom:30px;
+        }
+        .footer_wrap button{
+            width:40px; height:40px;
+            margin:17px 0 0 0;
+        }
+}
+
+
+
+
+
+/* 태블릿환경(css)-스크린폭: 최소 500px 이상 최대 1200px 이하 */
+
+@media screen and (min-width:500px) and (max-width:1200px){
+    
+    section h2{ display: none;}
+    
+    /* 1. header  -------------------------------------*/
+    #header{ 
+        height:80px; 
+         box-sizing:border-box; }
+    h1{
+        line-height: 80px; 
+        padding-left:15px;
+    }
+    .nav_btn{ 
+        position:fixed; right:10px; top:0;
+    }
+    .nav_btn button, .nav_close_btn button{ 
+        width:45px; height:45px;
+        margin:17px 10px 0 0;
+    }
+    .nav_btn button:hover, .nav_close_btn button:hover{
+        background:none; color:#000;
+    }
+    nav{
+        position:fixed; z-index:1;
+        left:0; top:0; margin-left:-100%;
+        width:33%; height:100%;
+      background: #1d1d1d;
+      opacity:0.97;
+    }
+    .nav_close_btn{
+        height:80px;
+        background:#1d1d1d; padding-right:10px;
+        text-align: right; 
+    }
+
+    .gnb li{ width:100%; height:50px; }
+
+    .gnb button{
+        display:block;
+        width:100%; height:60px;
+        font-size:18px; font-weight:bold;
+        color:#ffff;
+    }
+    .gnb button:hover{background:rgb(254, 183, 41); color:#000;}
+
+    /* 2. intro  -------------------------------------*/
+    .intro{ 
+      width:100%;
+      height:100%; overflow:hidden; 
+      background: url(../images/intro_bg.jpg) center top/cover;
+
+    }
+    .intro_wrap h2{ display:none; }
+    .intro_wrap ul{
+        width:300%;
+        height:750px; margin-top:30px;
+    }
+    .intro_wrap li{
+        width:33.333%; height:750px;
+        float:left; text-align:left;
+    }
+    
+    .intro_wrap li div{
+        padding:50px 20px 0;
+    }
+    .intro_wrap li div p{
+        margin-left:15px;
+    }
+    
+    .intro_wrap li p:first-child{
+        font-size:30px; font-weight:bold; color:rgb(254, 183, 41);
+        letter-spacing: -2px;
+        padding: 30px 0 40px 0;
+    }
+    .intro_wrap li p:first-child br{ display: none;}
+    .intro_wrap li p:nth-child(2){
+        margin-bottom:20px; color:#ffff;
+        font-size:24px; font-weight:bold; font-family:"NanumSquare";
+    }
+    .intro_wrap li p:last-child{
+        font-size:17px; font-family:"NanumSquare";
+        color:#ffff;
+    }
+    .intro_btn{
+        width:180px; height:30px;
+        position:absolute;
+        left:50%; margin-top:-80px;
+    }
+
+    /* 3. container  -------------------------------------*/
+    #container section:not(:first-child){
+        height:1000px; text-align:center;
+    }
+    #container section h2{
+        height:100px; line-height:100px;
+        font-size:25px;
+    }
+
+    /* 4. profile  -------------------------------------*/
+
+    .profile_wrap div{
+        height:850px; text-align:left;
+        width:90%; margin:0 5% 50px 5%; font-size:20px;
+        padding:50px 5px; color:#fff;
+    }
+    .profile_wrap div img{
+        width:100%; height:100%;
+    }
+    .profile_wrap div p{ margin-bottom:30px; line-height:30px; }
+    .profile_wrap div p:first-child{ 
+        font-size: 30px; font-weight: bold; 
+        padding-top:300px; color:#fff;
+        line-height: 40px;
+    }
+    .profile_wrap div ul{
+        clear:both;
+        margin-bottom:25px;
+    }
+    .profile_wrap div li{
+        width:200px; height:265px;
+        border:1px solid #666;
+        border-radius:23px;
+        overflow:hidden;
+        margin-right:50px;
+    }
+
+    /* 5. step  -------------------------------------*/
+    .step_wrap table{
+        border-collapse:collapse;
+        width:90%; margin:40px 5%;
+    }
+    .step_wrap tr>*{
+        display:block;
+    }
+    .step_wrap th{
+        height:40px; line-height:40px;
+        font-size:17px;
+        background:#aeb6b9; color:#fff;
+        border-radius:23px;
+    }
+    .step_wrap td{ padding:20px 20px 35px 20px; color:#fff; line-height: 25px; }
+    .step_wrap td br{ display:none; }
+
+    /* 6. job  -------------------------------------*/
+    .job_chart{
+        width:90%; margin:40px 5% 0;
+    }
+    .job_chart li{
+        width:100%; height:40px;
+        /*border:1px solid #d9d9d9;*/
+        margin:10px 0; line-height:40px;
+        color:#fff;
+    }
+    .job_chart li p{text-align:left;
+        text-indent:10px;
+        overflow:hidden;
+        font-weight: bold; 
+    } 
+    .job_chart li:nth-child(1) p{ width:80%; background:rgb(250, 250, 250,0.4); }
+    .job_chart li:nth-child(2) p{ width:90%; background:rgb(250, 250, 250,0.3); }
+    .job_chart li:nth-child(3) p{ width:95%; background:rgb(250, 250, 250,0.2); }
+    .job_chart li:nth-child(4) p{ width:85%; background:rgb(250, 250, 250,0.6); }
+    .job_chart li:nth-child(5) p{ width:80%; background:rgb(250, 250, 250,0.35); }
+
+    
+    .job_info{
+        color:#fff;
+    }
+    
+    .job_info li{
+        width:42.5%; height:180px; float:left;
+        padding-top:15px;/* 
+        background:rgba(174,182,185,0.9); */ 
+        background:rgb(250, 250, 250,0.1);
+        border-radius:23px;
+    }
+    .job_info li:nth-child(1){ margin:15px 5%; }
+    .job_info li:nth-child(2){ margin:15px 5% 0 0; }
+    .job_info li:nth-child(3){ margin:15px 5%; }
+    .job_info li:nth-child(4){ margin:15px 5% 0 0; }
+    .job_info li:nth-child(5){ margin:15px 5%; }
+    
+    .job_info li p:first-child{
+        height:60px; line-height:60px; font-size:20px;
+    }
+    .job_info li p:last-child{ padding:0 10px; padding-bottom:15px; }
+    .job_info li p:last-child br{ display:none; }
+
+    .job_info li:nth-child(1) p b{  color:rgb(254, 183, 41); }
+    .job_info li:nth-child(2) p b{  color:rgb(254, 183, 41); }
+    .job_info li:nth-child(3) p b{  color:rgb(254, 183, 41); }
+    .job_info li:nth-child(4) p b{  color:rgb(254, 183, 41); }
+    .job_info li:nth-child(5) p b{  color:rgb(254, 183, 41); }
+    
+    /* 7. port  -------------------------------------*/
+    .port{ color:#ffff; }
+    .port_btn{
+        width:90%; height:50px;
+        margin:50px 5%;
+    }
+    .port_btn button{
+        display:block; float:left;
+        width:30%; height:40px; margin:0 1.6%;
+        /*border:2px solid #d9d9d9;*/border:2px solid #1d1d1d;
+        box-sizing: border-box;
+        font-size:18px; border-radius:20px;
+        color:#ffff;
+    }
+    
+    .port_wrap ul{
+        width:90%; margin:0 auto;
+    }
+    .port_wrap li h3{ font-size:22px; height:50px; line-height:50px; }
+    
+    .port_wrap>ul>li:nth-child(1)>p{
+        width:450px; height:100%;
+        margin-bottom:50px; margin:0 auto 50px auto;
+    }
+    .port_wrap>ul>li:nth-child(1)>p img{ width:100%; height:100% }
+    
+    .port_wrap>ul>li table{
+        width:100%; border-collapse:collapse;
+        
+    }
+    .port_wrap>ul>li th{
+        height:50px; border-bottom:1px solid #d9d9d9;
+        font-size:20px;
+    }
+    
+    .port_wrap>ul>li td{ padding:40px 0; font-size:18px; }
+    
+    .port_wrap>ul>li tr p:nth-child(2),
+    .port_wrap>ul>li tr p:nth-child(3){
+        width:45%; float:left; padding-top:50px;
+    }
+    .port_wrap>ul>li tr p:nth-child(2){
+        margin:0 2.5% 0 5%;
+    }
+    .port_wrap>ul>li:nth-child(1) a{
+        display:block; height:50px; line-height:50px;
+        color:rgb(254, 183, 41);
+        border-radius:2; background:#1d1d1d;
+    }
+    .port_wrap>ul>li:nth-child(1) a:hover{
+        background:rgb(254, 183, 41); color:#1d1d1d;
+    }
+    .port_wrap>ul>li:nth-child(2) li{
+        width:45%; height:45%;
+        float:left;
+        margin:15px 2.5%;
+    }
+    .port_wrap>ul>li:nth-child(3) li{
+        width:28%; height:28%;
+        float:left;
+        margin:10px 2%;
+    }
+    .port_wrap>ul>li:nth-child(2) li img{
+        width:100%; height:100%;
+    }
+    .port_wrap>ul>li:nth-child(3) li img{
+        width:100%; height:100%;
+    }
+    
+    .port_wrap ul table:nth-of-type(2){ display:none; }
+    .port_wrap li:nth-child(3) button{
+        display:block;
+        font-size:28px;
+        font-family:NanumSquare;
+        float:left; color:rgb(254, 183, 41);
+        margin:25px 0 0 15px; width:50px;
+    }
+    .port_wrap li:nth-child(3) button:nth-of-type(1){
+        margin-left:39%;
+    }
+    .wd_more_btn1, .wd_more_btn2{
+        display:none;
+    }
+    .check_li_img2{
+        display:none;
+    } 
+    /* 8. QnA  -------------------------------------*/
+    .QnA{ clear:both; }
+    .QnA_wrap{ width:90%; margin:0 5%; }
+    .QnA_wrap h3{ display:none; }
+    .email{
+        /*  background:rgba(255,255,255,0.8); */
+        background:#1d1d1d;
+        width:85%; height:530px;
+        padding-top:35px;
+        border-radius:20px;
+        margin:0 auto; margin-top:35px;
+    }
+    .email p{
+        text-align:center;
+        font-size:20px; font-family:NanumSquare;
+        color:#ffff; margin-bottom:25px;
+    }
+    .email div input{
+        width:80%; height:50px;
+        font-size:15px;
+        text-indent:5px;
+        border:1px solid rgb(254, 183, 41);
+        font-family:NanumSquare;
+    }
+    .email div input::placeholder{
+        color:#cccccc;
+    }
+    .title input{
+        border-radius:20px;
+        margin-bottom:15px;
+    }
+    .address input{
+        border-radius:20px;
+        margin-bottom:15px;
+    }
+    .contents textarea{
+        width:80%; height:255px;
+        border-radius:20px;
+        font-size:16px; padding-top:10px;
+        text-indent:5px; border:1px solid rgb(254, 183, 41);
+        font-family:NanumSquare;
+    }
+    .contents textarea::placeholder{
+        color:#cccccc;
+    }
+    .email button{
+        width:100px; height:35px;
+        background:rgb(254, 183, 41); color:#777;
+        border-radius:20px; font-size:15px;
+        margin-top:10px; font-family:NanumSquare;
+    }
+    .email button:hover{
+        border:2px solid #000;
+        color:#000;
+    }
+    /* 9. footer  -------------------------------------*/
+    #footer{
+        height:150px;
+        border-top:1px solid #d9d9d9;
+        text-align:center;
+    }
+    .footer_wrap p:first-child{
+        position:fixed;
+        right: 20px;
+        bottom:30px;
+    }
+    .footer_wrap button{
+        width:45px; height:45px;
+        margin-top: 17px;
+    }
+}
+
+
+
+
+/* 3. 데스크탑(css)-스크린폭: 최소 1200px 이상 */
+
+@media screen and (min-width:1200px){
+    /* 1. header  -------------------------------------*/
+    #header{ 
+        position:fixed; left:0; top:0; z-index:1;
+        width:100%; height:80px;
+        background:#000;
+    }
+    .header_wrap{ width:1200px; height:80px; margin:0 auto; }
+    h1{
+        font-size:20px; line-height: 80px; 
+        padding:15px 0 0 10px; float:left;
+    }
+    .nav_btn, .nav_close_btn{ display:none; }
+    nav{ float:right; margin-right:30px; }
+
+    .gnb li{ width:130px; height:80px; float:left; }
+
+    .gnb button{
+        display:block;
+        width:100%; height:80px;
+        font-size:20px; font-weight:bold;
+        border-bottom:1px solid rgba(255, 255, 255, 0.1);
+        color:#ffff; font-family:Josefin Sans;
+    }
+    .gnb button:hover{ border-bottom:5px solid rgb(254, 183, 41); box-sizing:border-box; }
+    
+    
+    #container{ margin-top:80px; }
+    
+    /* 2. intro  -------------------------------------*/
+    .intro{
+      width:100%;
+      height:100%; overflow:hidden; 
+      background: black;
+    }
+    .intro_wrap h2{ display:none; }
+    .intro_wrap ul{
+        width:300%;
+        height:500px; margin-top:30px;
+    }
+    .intro_wrap li{
+        width:33.333%;
+        height:500px;
+        float:left;
+        text-align:left; 
+    }
+    .intro_wrap li div{
+        width:1200px; margin:0 auto;
+        padding:200px 20px 0;
+    }
+    .intro_wrap li div p{ margin-left:15px; }
+    .intro_wrap li p:first-child{
+        font-size:42px; font-weight:bold; color:rgb(254, 183, 41);
+        letter-spacing:-2px;
+        padding: 30px 0 40px 0;
+    }
+    .intro_wrap li p:nth-child(2){
+        margin-bottom:20px; color:#ffff;
+        font-size:24px; font-weight:bold; font-family:"NanumSquare";
+    }
+    .intro_wrap li p:last-child{
+        font-size:17px; font-family:"NanumSquare";
+        color:#ffff;
+    }
+    .intro_wrap li br{ display:none; }
+    
+    .intro_btn{
+        width:180px; height:30px;
+        position:absolute;
+        left:50%; margin-top:150px;
+    }
+
+    /* 3. concept  -------------------------------------*/
+    #container section:not(:first-child){
+        height:1000px; text-align:center;
+    }
+    #container section h2{
+        height:100px; line-height:100px;
+        font-size:25px;
+    }
+    
+    /* 4. profile  -------------------------------------*/
+    .profile_wrap{ width:1200px; margin:0 auto; }
+    .profile_wrap h2{ color:#fff; margin-top:30px; }
+    .profile_wrap div{
+        height:850px; text-align:left; margin:0 25px 30px;
+        width:92%; margin:0 4% 50px 4%; font-size:20px;
+        padding:50px 5px; color:#fff;
+    }
+    .profile_wrap div img{ float:left; margin-right:100px; width:250px; }
+    .profile_wrap div p{ margin-bottom:30px; line-height: 27px; }
+    .profile_wrap div p:first-child{ 
+        font-size: 30px; font-weight:bold; 
+        line-height: 40px;
+    }
+    .profile_wrap div li{
+        width:250px; height:332px;
+        border:1px solid #666;
+        border-radius:23px;
+        overflow:hidden;
+        float:left; margin-right:50px;
+    }
+    
+    
+    
+    
+    /* 5. step  -------------------------------------*/
+    .step{
+        height:1000px; color:#fff;
+        background: #000;/* 
+        background: url(../images/profile_bg.jpg) no-repeat center top/cover fixed; */
+    }
+    .step_wrap{ width:1200px; margin:0 auto; }
+    .step_wrap h2{ margin:20px 0; }
+    .step_wrap table{
+        border-collapse:collapse;
+        width:90%; margin:0 5%;
+    }
+    .step_wrap tr>*{
+        height:50px;  border-bottom:1px solid;
+    }
+    .step_wrap th{
+        width:250px; height:40px;
+        line-height:40px; font-size:18px;
+        background:rgba(174,182,185,0.9); color:#fff;
+        border-top-left-radius:23px;
+         
+            
+    } 
+
+    .step_wrap td{ padding:25px; text-align:left; font-size:17px; }
+    .step_wrap td br{ display:none; }
+
+    /* 6. job  -------------------------------------*/
+    .job{ height:1000px; color:#ffff; }
+    .job_wrap{ width:1200px; margin:0 auto; }
+    .job_wrap h2{ margin:20px 0; }
+    .job_chart{ width:90%; margin:0 5% 50px 5%; }
+    .job_chart li{
+        width:100%; height:40px;
+        /*border:1px solid #d9d9d9;*/
+        margin:10px 0; line-height:40px;
+        color:#ffff;
+    }
+    .job_chart li p{
+        text-align:left;
+        text-indent:10px;
+        overflow:hidden;
+        font-weight: bold; 
+    }
+    .job_chart li:nth-child(1) p{ width:80%; background:rgb(250, 250, 250,0.4); }
+    .job_chart li:nth-child(2) p{ width:90%; background:rgb(250, 250, 250,0.3); }
+    .job_chart li:nth-child(3) p{ width:95%; background:rgb(250, 250, 250,0.2); }
+    .job_chart li:nth-child(4) p{ width:85%; background:rgb(250, 250, 250,0.6); }
+    .job_chart li:nth-child(5) p{ width:80%; background:rgb(250, 250, 250,0.35); }
+
+
+
+    .job_info li{
+        width:380px; height:180px;
+        float:left; padding-top:25px; 
+        /* background:rgba(174,182,185,0.9); */
+        background:rgb(250, 250, 250,0.1);
+        margin:10px; border-radius:23px;
+    }
+    
+    .job_info li:nth-child(4){ margin-left:210px;  }
+    .job_info li p:first-child{ height:60px; line-height:60px; font-size:20px; }
+    .job_info li p:last-child{ padding:0 0 15px; font-size:17px; }
+
+    
+    .job_info li:nth-child(1) p b{  color:rgb(254, 183, 41); }
+    .job_info li:nth-child(2) p b{  color:rgb(254, 183, 41); }
+    .job_info li:nth-child(3) p b{  color:rgb(254, 183, 41); }
+    .job_info li:nth-child(4) p b{  color:rgb(254, 183, 41); }
+    .job_info li:nth-child(5) p b{  color:rgb(254, 183, 41); }
+
+
+    /* 7. port  -------------------------------------*/
+    .port{ height:1000px; color:#ffff; }
+    .port_wrap{ width:1200px; margin:0 auto; }
+    .port_btn{
+        width:90%; height:50px;
+        margin:0 5% 50px 5%;
+    }
+    .port_btn button{
+        display:block; float:left;
+        width:30%; height:40px; margin:0 1.6%;
+        border:2px solid #1d1d1d;
+        box-sizing: border-box;
+        font-size:18px; border-radius:20px;
+        color:#ffff;
+    }
+    .port_wrap ul{
+        width:1200px; margin:0 auto;
+    }
+    .port_wrap li h3{
+        font-size:26px; height:50px;
+        line-height:50px; margin-bottom:60px;
+    }
+    
+    .port_wrap>ul>li:nth-child(1)>p{
+        width:530px; float:left;
+        margin:30px 0 0 75px;
+    }
+    .port_wrap>ul>li:nth-child(1)>p img{ width:100%; height:100% }
+    
+    .port_wrap>ul>li:nth-child(1) tr p:nth-child(1){
+        padding:0 15px;
+    }
+    .port_wrap>ul>li:nth-child(1) tr p:nth-child(2),
+    .port_wrap>ul>li:nth-child(1) tr p:nth-child(3){
+        width:45%; float:left; padding-top:40px;
+    }
+    .port_wrap>ul>li:nth-child(1) tr p:nth-child(2){
+        margin:0 2.5% 0 5%;
+    }
+    .port_wrap>ul>li:nth-child(1) a{
+        display:block; height:50px; line-height:50px;
+        background:#000; color:rgb(254, 183, 41);
+    }
+    .port_wrap>ul>li:nth-child(1) a:hover{
+        border:1px solid; background:rgb(254, 183, 41); color:#000;
+        box-sizing: border-box;
+    }
+    
+    
+    .port_wrap>ul>li:nth-child(1) table{
+        width:480px; height:400px;
+        border-collapse:collapse;
+        float:right; margin-right:80px;
+        font-size:20px; background:#1d1d1d;
+        border-radius:23px;
+    }
+    .port_wrap>ul>li:nth-child(1) table td{
+        font-size:15px; 
+    }
+    .port_wrap>ul>li:nth-child(1) table br{ display:none; }
+    .port_wrap>ul>li:nth-child(1) table th{
+        width:150px; height:50px;
+    }
+    
+    .port_wrap>ul>li:nth-child(2) li{
+        width:312px; height:175px; 
+        background:none; float:left;
+        margin:25px 3.5%;
+    }
+    .port_wrap>ul>li:nth-child(3) li{
+        width:250px; height:120px;
+        background:none; float:left;
+        margin:5px 1.5%;
+    }
+    .port_wrap>ul>li:nth-child(3){
+        padding-left:25px;
+    }
+    .port_wrap>ul>li:nth-child(2) li img{
+        width:100%; height:100%;
+    }
+    .port_wrap>ul>li:nth-child(3) li img{
+        width:50%; height:100%;
+    }
+    
+    .port_wrap ul table:nth-of-type(1){ display:none; }
+     
+    .wd_more_btn1, .wd_more_btn2, .more_btn1, .more_btn2{
+        display:none;
+    }
+    /* 8. QnA  -------------------------------------*/
+    .QnA{ clear:both; color:#ffff; }
+    .QnA_wrap{ width:90%; margin:0 5%; }
+    .QnA_wrap h3{
+        display:none;
+    }
+    .email{
+       /*  background:rgba(255,255,255,0.8); */
+       background:#1d1d1d;
+        width:850px; height:530px;
+        padding-top:35px;
+        border-radius:20px;
+        margin:0 auto;
+    }
+    .email p{
+        text-align:center;
+        font-size:20px; font-family:NanumSquare;
+        color:rgb(255, 255, 255); margin-bottom:25px; 
+    }
+    .email div input{
+        width:750px; height:50px;
+        font-size:15px;
+        text-indent:5px;
+        border:1px solid #ffff;
+        font-family:NanumSquare;
+    }
+    /* ㄴ안쪽 테두리 색상*/
+    .email div input::placeholder{
+        color:#cccccc;
+    }
+    .title input{
+        border-radius:20px;
+        margin-bottom:15px;
+    }
+    .address input{
+        border-radius:20px;
+        margin-bottom:15px;
+    }
+    .contents textarea{
+        width:750px; height:255px;
+        border-radius:20px;
+        font-size:16px; padding-top:10px;
+        text-indent:5px; border:1px solid #ffff;
+        font-family:NanumSquare;
+    }
+    .contents textarea::placeholder{
+        color:#cccccc;
+    }
+    .email button{
+        width:100px; height:35px;
+        background:#ffff; color:#777;
+        border-radius:20px; font-size:15px;
+        margin-top:10px; font-family:NanumSquare;
+    }
+    .email button:hover{
+        border:2px solid #000;
+        color:#000;
+    }
+    /* 9. footer  -------------------------------------*/
+    #footer{
+        height:150px;
+        border-top:1px solid #d9d9d9;
+        text-align:center;
+    }
+    .footer_wrap p:first-child{
+        position:fixed;
+        left: 50%; margin-left:550px;
+        bottom:30px;
+    }
+    .footer_wrap button{
+        width:45px; height:45px;
+        margin-top: 17px;
+    }
+}
+ 
+p.typing-txt{
+    display: none;
+} 
+.typing {   
+    /*position: absolute;*/ 
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.3s; 
+    animation-iteration-count: infinite; 
+} 
+@keyframes cursor{ 
+    0%{border-right: 1px solid #ffff} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid #ffff} 
+}
+/* project step&skills_stepwrap공통*/
+.step_wrap tr:nth-child(1) th{ background:rgb(250, 250, 250, 0);} 
+.step_wrap tr:nth-child(2) th{ background:rgb(250, 250, 250,0.1);} 
+.step_wrap tr:nth-child(3) th{ background:rgb(250, 250, 250,0.2);} 
+.step_wrap tr:nth-child(4) th{ background:rgb(250, 250, 250,0.28);} 
+.step_wrap tr:nth-child(5) th{ background:rgb(250, 250, 250,0.33);} 
+.step_wrap tr:nth-child(6) th{ background:rgb(250, 250, 250,0.45);} 
+.step_wrap tr:nth-child(7) th{ background:rgb(250, 250, 250,0.55);} 
+
+.job_info  tr:nth-child(1) th{ background:#1d1d1d;}
